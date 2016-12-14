@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <title>BYU-Idaho</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="course.css" />
+</head>
+
+<body>
+    <div id="main">
+        <div id="header">
+            <img src="https://content.byui.edu/integ/gen/be2c7d0f-ed5e-4dca-ac0b-0b2a7155a4f2/0/smallBanner.jpg" alt="Course Banner" />
+        </div>
+
+        <div id="article">
+            <h1>Web Features</h1>
+            <hr />
+            <p>Web Features is a library of approved web layout and design features that may be easily copied into a course as it is designed. All HTML content in the course should be simple and must be maintainable. Complex and/or dynamic web elements not included on the Web Features page must be approved as an external resource. This page is stored in the Equella Managed Content collection and is documented as part of the Online Course Documentation. Any requested additions or changes will be submitted and approved through Online Learning Council. Note that when viewed on this page the default colors and styles are used but when you use them in a course they should take on the course specific styling. If they don't, please let Tim Tanner know and he will update the course stylesheet.</p>
+
+            <hr />
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+            <h4>Button</h4>
+
+            <p>Turn any link into a button: <a href="#" class="button">Start Quiz</a></p>
+            <p>This may be nice for links to quizzes or discussion boards.</p>
+
+            <div class="drop-down">
+                Code Instructions
+            </div>
+            <div class="drop-content instruction-box">
+                <h5>HTML</h5> Instructions:
+                <ol>
+                    <li>Create a link as you normally would.</li>
+                    <li>Open the HTML and find the link tag.
+                        <br><span class="small-text">Hint: Type "&lt;a" into the find on page tool to locate all the link tags.</span></li>
+                    <li>Add the highlighted code shown below (change button text if necessary).</li>
+                </ol>
+                <p class="code">&lt;a <span class="highlight">class="button"</span> href="URL"&gt;Button Text&lt;/a&gt;</p>
+            </div>
+
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+            <h4>Tables</h4>
+
+            <h5>Basic Table</h5>
+
+            <table>
+                <tr>
+                    <th>Heading</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+                </tr>
+                <tr>
+                    <td>Text</td>
+                    <td>Text</td>
+                    <td>Text</td>
+                    <td>Text</td>
+                    <td>Text</td>
+                </tr>
+                <tr>
+                    <td>Text</td>
+                    <td>Text</td>
+                    <td>Text</td>
+                    <td>Text</td>
+                    <td>Text</td>
+                </tr>
+                <tr>
+                    <td>Text</td>
+                    <td>Text</td>
+                    <td>Text</td>
+                    <td>Text</td>
+                    <td>Text</td>
+                </tr>
+                <tr>
+                    <td>Text</td>
+                    <td>Text</td>
+                    <td>Text</td>
+                    <td>Text</td>
+                    <td>Text</td>
+                </tr>
+            </table>
+
+            <h5>Rubric Table</h5>
+
+            <table class="rubric">
+                <tr>
+                    <th>Heading</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+                </tr>
+                <tr>
+                    <th>Heading</th>
+                    <td>Text</td>
+                    <td>Text</td>
+                    <td>Text</td>
+                    <td>Text</td>
+                </tr>
+                <tr>
+                    <th>Heading</th>
+                    <td>Text</td>
+                    <td>Text</td>
+                    <td>Text</td>
+                    <td>Text</td>
+                </tr>
+                <tr>
+                    <th>Heading</th>
+                    <td>Text</td>
+                    <td>Text</td>
+                    <td>Text</td>
+                    <td>Text</td>
+                </tr>
+                <tr>
+                    <th>Heading</th>
+                    <td>Text</td>
+                    <td>Text</td>
+                    <td>Text</td>
+                    <td>Text</td>
+                </tr>
+            </table>
+
+            <div class="drop-down">
+                Code Instructions
+            </div>
+            <div class="drop-content instruction-box">
+                <h5>HTML</h5> Instructions:
+                <br> &nbsp;&nbsp;Option 1:
+                <ol>
+                    <li>Use the code generator below.</li>
+                    <li>Paste the output code into the course page HTML.</li>
+                    <li>Update the page and then fill in the table as normal.</li>
+                </ol>
+                &nbsp;&nbsp;Option 2:
+                <ol>
+                    <li>Create a table as you normally would in D2L.</li>
+                    <li>Open the HTML and find the table tag.
+                        <br><span class="small-text">Hint: Type "&lt;table" into the find on page tool to locate all the table tags.</span></li>
+                    <li>Add the highlighted code shown below to add the rubric styling.</li>
+                </ol>
+                <p class="code">&lt;table <span class="highlight">class="rubric"</span>&gt;</p>
+                <h5>Code Generator</h5>
+                <form>
+                    <label>Table type:</label>
+                    <span><input id="basic-table" type="radio" name="type" onclick="setDefaults();" checked> Basic</span>
+                    <span><input id="rubric-table" type="radio" name="type" onclick="setDefaults();"> Rubric</span>
+                    <br>
+                    <label>Column headings:</label>
+                    <span><input id="col-head-yes" type="radio" name="columnHeading" checked> Yes</span>
+                    <input id="col-head-no" type="radio" name="columnHeading"> No
+                    <br>
+                    <label>Row Headings:</label>
+                    <span><input id="row-head-yes" type="radio" name="rowHeading"> Yes</span>
+                    <input id="row-head-no" type="radio" name="rowHeading" checked> No
+                    <br>
+                    <label>*Number of:</label>
+                    Columns:
+                    <input id="num-of-columns" type="text"> Rows:
+                    <input id="num-of-rows" type="text">
+                    <br>
+                    <span class="small-text">*Include any row or column headings in the count.</span>
+                </form>
+                <button id='btn-build-table' onclick="buildTable()">Generate Code</button>
+                <br>
+                <span id="copy-outcome-table"></span>
+                <textarea id="table-html" class="hidden" readonly></textarea>
+            </div>
+
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+            <h4>Mouseover pop-up</h4>
+
+            <p>Here is a mouseover <span class="popup">pop-up<span>Here you can put whatever message you would like!</span></span>
+            </p>
+
+            <div class="drop-down">
+                Code Instructions
+            </div>
+            <div class="drop-content instruction-box">
+                <h5>HTML</h5> Instructions:
+                <ol>
+                    <li>Copy the entire code below.</li>
+                    <li>Paste it in the course page HTML where you would like it.
+                        <br><span class="small-text">Hint: Type part of the sentance you want to add it to in the find on page tool to locate the right spot.</span></li>
+                    <li>While still in the HTML code, update the text within the span tags to the word that will trigger the message. Then add the message you would like to pop up upon mouseover.</li>
+                </ol>
+                <p class="code">&lt;span class="popup"&gt;WORD-HERE&lt;span&gt;MESSAGE-HERE&lt;/span&gt;&lt;/span&gt;</p>
+                <h5>Notes</h5>
+                <p>These pop-ups are great for definitions or short explanations, especially in pathway courses.</p>
+            </div>
+
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+            <h4>Overlay</h4>
+
+            <p>Here is an <a class="triggerOverlay" href="#overlay1">example overlay</a></p>
+
+            <div class="drop-down">
+                Code Instructions
+            </div>
+            <div class="drop-content instruction-box">
+                <h5>HTML</h5> Instructions:
+                <ol>
+                    <li>Copy the code in the first code box below.</li>
+                    <li>Paste the code in the paragraph where you would like it.
+                        <br><span class="small-text">Hint: Type part of the sentance you want to add it to in the find on page tool to locate the right spot.</span></li>
+                    <li>Replace "WORD(S)-HERE" with the word or text you want to act as the trigger.</li>
+                    <li>Copy the code in the second code box.</li>
+                    <li>In the course page HTML find the script tag at the bottom of the code right above the closing body tag. Paste the code directly <b>above</b> the script tag.</li>
+                </ol>
+                <p class="code">&lt;a class="triggerOverlay" href="#overlay1"&gt;WORD(S)-HERE&lt;/a&gt;</p>
+                <br>
+                <p class="code">&lt;div id="overlay1" class="overlay"&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;h2&gt;Heading&lt;/h2&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;Content here...<br>
+                    &lt;/div&gt;</p>
+                <h5>Notes</h5>
+                <p>The heading in the overlay should match or in some way connect with the text used in the link that triggers the overlay. The overlay can be used to hold anything you want such as paragraphs, images, tables, etc.</p>
+                <p>If you need multiple overlays on the same page then make sure to increment the "1" in the href of the new link trigger <b>and</b> in the new overlay ID.</p>
+            </div>
+
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+            
+            <h4>Callout Box</h4>
+
+            <h5>Click to see the effects of different classes applied to the callout. The code that you need will be shown in the code instructions box below.</h5>
+
+            <div class="demoControls calloutDemo">
+                <div class="demoControl">
+                    <h5>Position:</h5>
+                    <span class="demo-text">Left:</span>
+                    <input type="radio" name="positionCallout" value="left" onclick="updateImage(this)" Checked>
+                    <br>
+                    <span class="demo-text">Center:</span>
+                    <input type="radio" name="positionCallout" value="center" onclick="updateImage(this)">
+                    <br>
+                    <span class="demo-text">Right:</span>
+                    <input type="radio" name="positionCallout" value="right" onclick="updateImage(this)">
+                </div>
+                <div class="demoControl">
+                    <h5>Size:</h5>
+                    <span class="demo-text">Quarter:</span>
+                    <input type="radio" name="sizeCallout" value="quarter" onclick="updateImage(this)" Checked>
+                    <br>
+                    <span class="demo-text">Half:</span>
+                    <input type="radio" name="sizeCallout" value="half" onclick="updateImage(this)">
+                    <br>
+                    <span class="demo-text">Full:</span>
+                    <input type="radio" name="sizeCallout" value="full" onclick="updateImage(this)">
+                </div>
+            </div>
+
+            <p class="clearfix">Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. <span id="demoCallout" class="callout left quarter">This is a callout box which can be used to emphasize text.</span> Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+
+            <div class="drop-down">
+                Code Instructions
+            </div>
+            <div class="drop-content instruction-box">
+                <h5>HTML</h5> Instructions(callouts within a paragraph):
+                <ol>
+                    <li>Copy the code below</li>
+                    <li>Open HTML and paste the code within a paragraph</li>
+                </ol>
+                <p class="code">&lt;span <span class="highlight">class="<span id="calloutClass">callout left quarter</span>"</span>&gt;Message Here&lt;/span&gt;</p>
+                <br>
+                Instructions(callouts outside of a paragraph):
+                <ol>
+                    <li>Copy the code below</li>
+                    <li>Open HTML and paste the code where desired</li>
+                </ol>
+                <p class="code">&lt;p <span class="highlight">class="<span id="calloutClassP">callout left quarter</span>"</span>&gt;Message Here&lt;/p&gt;</p>
+            </div>
+
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+            <h4>Images</h4>
+
+            <h5>Click to see the effects of different classes applied to the image. The code that you need will be shown in the code instructions box below.</h5>
+
+            <div class="demoControls">
+                <div class="demoControl">
+                    <h5>Position:</h5>
+                    <span class="demo-text">Left:</span>
+                    <input type="radio" name="position" value="left" onclick="updateImage(this)" Checked>
+                    <br>
+                    <span class="demo-text">Center:</span>
+                    <input type="radio" name="position" value="center" onclick="updateImage(this)">
+                    <br>
+                    <span class="demo-text">Right:</span>
+                    <input type="radio" name="position" value="right" onclick="updateImage(this)">
+                </div>
+                <div class="demoControl">
+                    <h5>Size:</h5>
+                    <span class="demo-text">Quarter:</span>
+                    <input type="radio" name="size" value="quarter" onclick="updateImage(this)" Checked>
+                    <br>
+                    <span class="demo-text">Half:</span>
+                    <input type="radio" name="size" value="half" onclick="updateImage(this)">
+                    <br>
+                    <span class="demo-text">Full:</span>
+                    <input type="radio" name="size" value="full" onclick="updateImage(this)">
+                </div>
+                <div class="demoControl">
+                    <h5>Caption:</h5>
+                    <span class="demo-text">With:</span>
+                    <input type="radio" name="caption" value="caption" onclick="updateImage(this)" Checked>
+                    <br>
+                    <span class="demo-text">Without:</span>
+                    <input type="radio" name="caption" value="noCaption" onclick="updateImage(this)">
+                </div>
+            </div>
+
+            <p class="clearfix">Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. <img id="demoImage" class="left quarter" src="images/McKayLibrary.jpg" alt="McKay Library"><span id="demoCaption" class="caption">Insert Caption Text Here</span> Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+            <div class="drop-down">
+                Code Instructions
+            </div>
+            <div class="drop-content instruction-box">
+                <h5>HTML</h5> Instructions:
+                <ol>
+                    <li>Insert image like you normally would in D2L.</li>
+                    <li>Open HTML and find the image tag.
+                        <br><span class="small-text">Hint: Type "img" into the find on page tool to locate all the image tags.</span></li>
+                    <li>Add the highlighted code shown below.</li>
+                </ol>
+                <p>The code below is updated with every change made to the demo image above. </p>
+                <p class="code">&lt;img <span class="highlight">class="<span id="position">left</span> <span id='size'>quarter</span>"</span> src="fileName" alt="..."&gt;<span id="caption" class="highlight">&lt;span class="caption"&gt;Insert Caption Text Here&lt;/span&gt;</span></p>
+                <p>Note: These classes can be used to size and postion any element such as a callout box, table, or paragraph. Adding these classes will make images or elements responsive to mobile devices.</p>
+            </div>
+
+            <div class="drop-down">
+                Class Name Reference Table
+            </div>
+            <div class="drop-content instruction-box">
+
+                <table>
+                    <tr>
+                        <th>Class Name</th>
+                        <th>Result</th>
+                    </tr>
+                    <tr>
+                        <td>left</td>
+                        <td>Floats the image/element to the left</td>
+                    </tr>
+                    <tr>
+                        <td>center</td>
+                        <td>Centers the image/element on the page and makes it so nothing else will be to the left or right of it</td>
+                    </tr>
+                    <tr>
+                        <td>right</td>
+                        <td>Floats the image/element to the right</td>
+                    </tr>
+                    <tr>
+                        <td>clearfix</td>
+                        <td>If floating an element left or right causes elements below to come up higher then they are supposed to then use this class on the floated elements parent container (usually a paragraph or div tag) to fix the problem.</td>
+                    </tr>
+                    <tr>
+                        <td>full</td>
+                        <td>Makes image/element the full width of the page</td>
+                    </tr>
+                    <tr>
+                        <td>half</td>
+                        <td>Makes image/element half the width of the page</td>
+                    </tr>
+                    <tr>
+                        <td>quarter</td>
+                        <td>Makes the image/element a quarter width of the page</td>
+                    </tr>
+                    <tr>
+                        <td>caption</td>
+                        <td>If you would like a caption under your image then place a span immediately following your image and give the span the class of "caption". NOTE: Your <strong>image</strong> must be sized <strong>and</strong> positioned with the classes above for your caption to display correctly under the image.</td>
+                    </tr>
+                </table>
+            </div>
+
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+            <h4>Drop Down</h4>
+
+            <div class="drop-down">
+                Example
+            </div>
+            <div class="drop-content">
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+                <p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum.</p>
+            </div>
+
+            <div class="drop-down">
+                Code Instructions
+            </div>
+            <div class="drop-content instruction-box">
+                <h5>HTML</h5>
+                <ol>
+                    <li>Copy the code below.</li>
+                    <li>Paste the code in the course page HTML.</li>
+                    <li>Update the page and add your headings to the drop-down bars, then add the text/images into the content area as you normally would.</li>
+                </ol>
+                <p class="code">&lt;div class="drop-down"&gt;
+                    <br> &nbsp;&nbsp;&nbsp;&nbsp;HEADING-HERE
+                    <br> &lt;/div&gt;
+                    <br> &lt;div class="drop-content"&gt;
+                    <br> &nbsp;&nbsp;&nbsp;&nbsp;CONTENT-HERE
+                    <br> &lt;/div&gt;
+                </p>
+                <h5>Notes</h5>
+                <p>You can put anything you would like in the content area including other HTML elements and images. Also note that if the JavaScript for any reason didn't run the dropdowns would all be displayed open and all content would be available.</p>
+            </div>
+
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+            <h4>Image Carousel</h4>
+
+            <div class="carousel">
+
+                <div class="slide">
+                    <img src="images/slide-1.jpg" alt="Be authentic and consistent">
+                </div>
+                <div class="slide">
+                    <img src="images/slide-2.jpg" alt="Edify and uplift">
+                </div>
+                <div class="slide">
+                    <img src="images/slide-3.jpg" alt="Respect Intellectual Property">
+                </div>
+                <div class="slide">
+                    <img src="images/slide-4.jpg" alt="Be wise and vigilant">
+                </div>
+
+            </div>
+
+            <div class="drop-down">
+                Code Instructions
+            </div>
+            <div class="drop-content instruction-box">
+                <h5>HTML</h5>
+                <ol>
+                    <li>Copy the code below.</li>
+                    <li>Paste the code in the course page HTML.</li>
+                    <li>Copy and past as many div's with the class slide as you need within the carousel div.</li>
+                    <li>Add an image or other content into each slide</li>
+                </ol>
+                <p class="code">&lt;div class="carousel"&gt;
+                    <br> &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="slide"&gt;
+                    <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Insert image or content
+                    <br> &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+                    <br> &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="slide"&gt;
+                    <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Insert image or content
+                    <br> &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+                    <br> &lt;/div&gt;
+                </p>
+                <h5>Notes</h5>
+                <p>If the content in the slides need additional stying please contact Bro. Tanner.</p>
+            </div>
+
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+            <h4>Activity Banners</h4> Select Activity:
+            <select id="activitySelected">
+                <optgroup label="Prepare">
+                    <option value="prepare caseStudy">Case Study</option>
+                    <option value="prepare checkUnderstanding">Check-Your-Understanding</option>
+                    <option value="prepare preAssessment">Pre-Assessment</option>
+                    <option value="prepare readings">Readings</option>
+                    <option value="prepare research">Research</option>
+                    <option value="prepare video">Video</option>
+                </optgroup>
+                <optgroup label="Teach One Another">
+                    <option value="teach caseStudy">Case Study</option>
+                    <option value="teach fieldExperience">Field Experience Sharing</option>
+                    <option value="teach groupPresentation">Group Presentation</option>
+                    <option value="teach groupProblemSolving">Group Problem Solving</option>
+                    <option value="teach groupProject">Group Project</option>
+                    <option value="teach iceBreaker">Ice-Breaker</option>
+                    <option value="teach insightSharing">Insight Sharing</option>
+                    <option value="teach jigsawActivity">Jigsaw Activity</option>
+                    <option value="teach peerAccountability">Peer Accountability</option>
+                    <option value="teach peerFeedback">Peer Feedback</option>
+                    <option value="teach rolePlayDiscussion">Role Play Discussion</option>
+                    <option value="teach structuredDebate">Structured Debate</option>
+                    <option value="teach studyGroup">Study Group</option>
+                    <option value="teach supportForum">Support Forum</option>
+                    <option value="teach topicDiscussion">Topic Discussion</option>
+                </optgroup>
+                <optgroup label="Ponder and Prove">
+                    <option value="ponder assessment">Assessment</option>
+                    <option value="ponder demonstrateProficiency">Demonstrate Proficiency</option>
+                    <option value="ponder practiceApply">Practice/Apply</option>
+                    <option value="ponder presentation">Presentation</option>
+                    <option value="ponder reflection">Reflection</option>
+                </optgroup>
+                <optgroup label="Other">
+                    <option value="other">Other</option>
+                </optgroup>
+            </select>
+            <select id="activityCategory">
+                <option value="prepare">Prepare</option>
+                <option value="teach">Teach One Another</option>
+                <option value="ponder">Ponder</option>
+            </select>
+            <div id="activityBanner">
+                <h1 class="activity prepare caseStudy">Case Study</h1>
+            </div>
+
+            <div class="drop-down">
+                Code Instructions
+            </div>
+            <div class="drop-content instruction-box">
+                <h5>HTML</h5> Instructions:
+                <ol>
+                    <li>Select the desired banner from the drop-down above.</li>
+                    <li>Copy the appropriate code below and past it into the html.</li>
+                </ol>
+                <div id="bannerCodeWrapper">
+                    <p>If the activity banner is the main heading of the page:</p>
+                    <p id="activityBannerH1" class="code">
+                        &lt;h1 class="activity prepare caseStudy"&gt;Case Study&lt;/h1&gt;
+                    </p>
+                    <p>If the activity banner is a sub-section on the page:</p>
+                    <p id="activityBannerH2" class="code">
+                        &lt;h2 class="activity prepare caseStudy"&gt;Case Study&lt;/h2&gt;
+                    </p>
+                </div>
+                <h5>Note</h5>
+                <p>The only difference between the two code options is that one is built using a heading 1 and the other a heading 2. There will be no visual difference in the banners but it is important to use the correct one for ADA complience.</p>
+                <h5>Banner and Icon Images</h5>
+                <p>If you need a banner as an image you can find them here: <a href="https://content.byui.edu/items/a9c07b08-46d0-446e-98f9-6170ae61dd86/0">Activity Banner Images</a></p>
+                <p>If you need just a icon for reference material you can find them here: <a href="https://content.byui.edu/items/2a85e323-93f4-4a3c-8b06-bb4aaddc8ca3/0">Activity Icon Images</a></p>
+                
+            </div>
+
+            <h4>Columned Text</h4>
+
+            <div class="column">
+                <p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.</p>
+
+                <p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.</p>
+            </div>
+            <div class="column">
+                <p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.</p>
+
+                <p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.</p>
+            </div>
+
+            <div class="drop-down">
+                Code Instructions
+            </div>
+            <div class="drop-content instruction-box">
+                <h5>HTML</h5> Instructions(Using existing paragraphs):
+                <ol>
+                    <li>Go into the content page HTML and wrap one or more paragraphs in a div with the class "column" as shown in the code box below. This will be your first column.</li>
+                    <li>Repeat step one for the second column makeing sure the two divs are directly next to each other.</li>
+                </ol>
+                Instructions(Creating new paragraphs):
+                <ol>
+                    <li>Copy the entire code shown below.</li>
+                    <li>Go into the content page HTML and paste the code where you would like the columns</li>
+                    <li>Save the change and use the editor as normal to replace "PARAGRAPH" with your text. Note that you can create more paragraphs in each column by hitting return after any of the paragraphs already in the column.</li>
+                </ol>
+                <p class="code">
+                    &lt;div <span class="highlight">class="column"</span> &gt;
+                    <br> &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;PARAGRAPH&lt;/p&gt;
+                    <br> &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;PARAGRAPH&lt;/p&gt;
+                    <br> &lt;/div&gt;
+                    <br> &lt;div class="column"&gt;
+                    <br> &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;PARAGRAPH&lt;/p&gt;
+                    <br> &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;PARAGRAPH&lt;/p&gt;
+                    <br> &lt;/div&gt;
+                </p>
+                <h5>Notes:</h5>
+                <p>You can include images, tables, or other elements within the column as well. It isn't limited to paragraphs. If using images in a column remember the sizing classes will be relative to the width of the column so you will probably want to use the "full" class so the image will span the width of the column.</p>
+            </div>
+
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+            <h4>Columned Lists</h4>
+
+            <h5>Click to see the effects of different classes applied to the columned lists. The code that you need will be shown in the code instructions box below.</h5>
+            
+            <table>
+                <tr>
+                    <th>Class Name</th>
+                    <th>Result</th>
+                </tr>
+                <tr>
+                    <td>Unspecified</td>
+                    <td>By using just the class list-columns, all list will take up as much width as they need and will allow the next list to come up next to it if there is enough space. This is great for lists with short text. If all the lists don't fit on one row then the bullet points on the lists in the following rows may not line up.</td>
+                </tr>
+                <tr>
+                    <td>Two/Three/Four</td>
+                    <td>Specifing how many columns you want to allow will insure that the bullet points will line up with the lists above. It is simply setting the width of each list to 25, 33 or 50 percent.</td>
+                </tr>
+                <tr>
+                    <td>Center</td>
+                    <td>The center class should really only be used if all the lists will fit on one row. Otherwise if lists wrap to a new row they will be centered and again may not line up nicely with the row above.</td>
+                </tr>
+
+            </table>
+
+            <div class="demoControls listDemo">
+                <div class="demoControl">
+                    <h5>Columns:</h5>
+                    <span class="demo-text">Unspecified:</span>
+                    <input type="radio" name="columns" value="unspecified" onclick="updateList(this)" Checked>
+                    <br>
+                    <span class="demo-text">Two:</span>
+                    <input type="radio" name="columns" value="two" onclick="updateList(this)">
+                    <br>
+                    <span class="demo-text">Three:</span>
+                    <input type="radio" name="columns" value="three" onclick="updateList(this)">
+                    <br>
+                    <span class="demo-text">Four:</span>
+                    <input type="radio" name="columns" value="four" onclick="updateList(this)">
+                </div>
+                <div class="demoControl">
+                    <h5>Position:</h5>
+                    <span class="demo-text">Left:</span>
+                    <input type="radio" name="positionList" value="left" onclick="updateList(this)" Checked>
+                    <br>
+                    <span class="demo-text">Center:</span>
+                    <input type="radio" name="positionList" value="center" onclick="updateList(this)">
+                </div>
+            </div>
+
+            <h5>Example With Short Text</h5>
+            <div class="list-columns">
+                <ul>
+                    <li>Lorem ipsum dolor</li>
+                    <li>Lorem ipsum dolor</li>
+                    <li>Lorem ipsum dolor</li>
+                    <li>Lorem ipsum dolor</li>
+                </ul>
+                <ul>
+                    <li>Lorem ipsum dolor</li>
+                    <li>Lorem ipsum dolor</li>
+                    <li>Lorem ipsum dolor</li>
+                    <li>Lorem ipsum dolor</li>
+                </ul>
+            </div>
+            <h5>Example With Longer Text</h5>
+            <div class="list-columns">
+                <ul>
+                    <li>Proin at ex non metus tempus placerat a sit amet metus.</li>
+                    <li>Vivamus imperdiet nunc quis lectus viverra tempor.</li>
+                    <li>Sed blandit velit consequat facilisis tempor.</li>
+                </ul>
+                <ul>
+                    <li>Cras pellentesque sapien quis ipsum feugiat volutpat.</li>
+                    <li>Nam liber tempor cum soluta nobis Nam liber tempor cum soluta nobis</li>
+                    <li>Vestibulum sed leo a dolor rutrum euismod vitae egestas odio.</li>
+                </ul>
+                <ul>
+                    <li>In porttitor sapien ac nisl accumsan, eget blandit enim venenatis.</li>
+                    <li>Sed auctor sem at tincidunt feugiat.</li>
+                    <li>Nunc commodo orci ac ligula ullamcorper, non vulputate metus gravida.</li>
+                </ul>
+                <ul>
+                    <li>Nulla eleifend est eget auctor molestie.</li>
+                    <li>Fusce sit amet ex ut metus sollicitudin faucibus et a mauris.</li>
+                    <li>Nam liber tempor cum soluta nobis Nam liber tempor cum soluta nobis</li>
+                </ul>
+            </div>
+
+            <div class="drop-down">
+                Code Instructions
+            </div>
+            <div class="drop-content instruction-box">
+                <h5>HTML</h5> Instructions:
+                <ol>
+                    <li>Copy the code below.</li>
+                    <li>Go into the content page HTML and paste the code where you would like the lists.</li>
+                    <li>Save the change and use the editor to add the items to each list.</li>
+                </ol>
+                <p class="code">&lt;div class="<span id="listClass">list-columns</span>"&gt;
+                    <br>
+                    <span id="listCode">&nbsp;&nbsp;&nbsp;&nbsp;&lt;ul&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;item&lt;/li&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;ul&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;item&lt;/li&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;<br></span> &lt;/div&gt;
+                </p>
+                <h5>Notes:</h5>
+                <p>You can use any number of lists within the div and they will just wrap to a new row when space runs out.</p>
+            </div>
+
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+        </div>
+    </div>
+    <div id="overlay1" class="overlay">
+        <h2>Example Overlay</h2>
+        <img class="center full" src="images/campusAutumn.jpg" alt="The MC during the fall">
+        <span class="caption">The MC during the fall</span>
+    </div>
+    <script src="course.js"></script>
+</body>
+
+</html>

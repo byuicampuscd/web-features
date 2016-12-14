@@ -1,0 +1,150 @@
+/********************************************************
+    The purpose of course.css is to house only the css
+    specific to an individual course. The online.css
+    houses all the default template formatting.
+********************************************************/
+/* DO NOT DELETE OR MODIFY THIS IMPORT */
+/*@import url("https://content.byui.edu/integ/gen/599082e0-3e89-4fd9-ac69-2615865d63c7/0/online.css");*/
+@import url("online.css");
+
+/* Add Course Specific css Below */
+
+*[tabIndex="-1"] {
+    outline: none;
+}
+
+h5 {
+    margin-bottom: 5px;
+}
+
+.hidden {
+    display: none;
+}
+
+/*******************************************************
+    Table Code Generator
+*******************************************************/
+
+form {
+    margin-bottom: 5px;
+}
+
+form label {
+    display: inline-block;
+    width: 150px;
+    margin: 5px 10px 5px 5px;
+    text-align: right;
+}
+
+form label + span {
+    display: inline-block;
+    width: 70px;
+}
+
+#btn-build-table {
+    padding: 6px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    box-shadow: 2px 2px #a0a0a0;
+    cursor: pointer;
+}
+
+#btn-build-table:active {
+    box-shadow: none;
+}
+
+input[type="text"] {
+    height: 20px;
+    border-radius: 5px;
+    padding-left: 4px;
+}
+
+#table-html {
+    margin-bottom: 15px;
+    width: 100%;
+    height: 150px;
+}
+
+#num-of-columns, #num-of-rows {
+    width: 30px;
+}
+/** End Table Code Generator ***************************/
+
+.small-text {
+    font-size: 12px;
+}
+
+.instruction-box {
+    background: #e4e4e4;
+    text-align: left;
+}
+
+.drop-down.noFloat {
+    margin-top: 30px;
+}
+
+.demoControls {
+    margin: 10px;
+}
+
+.demoControls.calloutDemo,
+.demoControls.listDemo{
+    text-align: center;
+}
+
+.demoControls.calloutDemo .demoControl,
+.demoControls.listDemo .demoControl {
+    text-align: left;
+}
+
+.demoControls.calloutDemo .demoControl:nth-child(2),
+.demoControls.listDemo .demoControl:nth-child(2) {
+    border-right: none;
+}
+
+.demoControl {
+    display: inline-block;
+    vertical-align: top;
+    width: 32%;
+    border-right: 1px solid #000;
+}
+
+.demoControl h5 {
+    text-align: center;
+}
+
+.demoControl:nth-child(3) {
+    border-right: none;
+}
+
+.demo-text {
+    display: inline-block;
+    width: 50%;
+    margin-right: 10px;
+    text-align: right;
+}
+
+.highlight {
+    background: #e6ea85;
+}
+
+.code {
+    display: inline-block;
+    padding: 5px;
+    border: 2px ridge #8d8d8d;
+    background: #eef1f6;
+}
+
+#bannerCodeWrapper p:nth-child(odd) {
+    margin: 10px 0 0;
+}
+
+#activityCategory {
+    display: none;
+}
+
+#three-left,
+#two-center,
+#three-center {
+    display: none;
+}
